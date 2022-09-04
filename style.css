@@ -1,6 +1,32 @@
+:root {
+  --fz-sm: 1rem;
+  --fz-md: 1.25rem;
+  --fz-lg: 1.5rem;
+  --fz-xl: 2rem;
+
+  --space-2xs: 0.5rem;
+  --space-xs: 1rem;
+  --space-sm: 1.5rem;
+  --space-md: 2rem;
+  --space-lg: 3rem;
+  --space-xl: 4rem;
+  --space-2xl: 6rem;
+  --space-3xl: 8rem;
+
+  --color-primary: hsl(160deg, 100%, 30%);
+  --color-secondary-light: hsl(45deg, 100%, 50%);
+  --color-secondary-dark: hsl(45deg, 100%, 40%);
+  --color-gray-100: hsl(0deg, 0%, 100%);
+  --color-gray-200: hsl(0deg, 0%, 60%);
+  --color-gray-300: hsl(0deg, 0%, 40%);
+  --color-gray-400: hsl(0deg, 0%, 30%);
+  --color-gray-500: hsl(0deg, 0%, 10%);
+  --color-gray-600: hsl(0deg, 0%, 0%);
+}
+
 * {
   box-sizing: border-box;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 html,
@@ -10,3 +36,60 @@ body {
 }
 
 /* Add styles here! */
+.max-width-wrapper {
+  max-width: 640px;
+  padding-left: var(--space-xs);
+  padding-right: var(--space-xs);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.intro-chunk {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  max-width: 330px;
+}
+
+.title {
+  color: var(--color-gray-600);
+  font-size: var(--fz-xl);
+}
+
+.intro-chunk strong {
+  color: var(--color-primary);
+}
+
+main {
+  background-color: var(--color-gray-200);
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-top-width: 6px;
+  border-top-style: solid;
+  border-top-color: var(--color-gray-300);
+}
+
+.card {
+  margin-left: calc(var(--space-xs) * -1);
+  margin-right: calc(var(--space-xs) * -1);
+  background-color: var(--color-gray-100);
+  border-bottom-width: 6px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--color-gray-300);
+  padding: var(--space-2xs) var(--space-xs) var(--space-xs);
+}
+
+.card p {
+  margin-bottom: 0;
+}
+
+.indented-heading {
+  font-size: var(--fz-lg);
+  margin: 0;
+  padding: var(--space-xs) var(--space-sm);
+  margin-left: calc(var(--space-sm) * -1);
+  background-color: var(--color-secondary-light);
+  border-bottom-width: 6px;
+  border-bottom-style: solid;
+  border-bottom-color: var(--color-secondary-dark);
+  width: fit-content;
+}
